@@ -10,4 +10,4 @@ This is a collection of projects that I have worked on either in school at the U
  - Given the board size and position of the empty space, the program outputs the most efficent solution step by step and shows the board state after each move
 3. PitStopPro - Django
  - This repository consists of the code for a mechanic shop software system that a team and I are currently working on for our Senior Final Project
- - the webapp in its current state can be found at capstone-deployment-production.up.railway.app (subject to change) (login with user: will@gmail.com pass:Will)
+ - the webapp in its current state can be found at capstone-deployment-production.up.railway.app (subject to change) (login with user: willcolumbia01@gmail.com pass:Will)

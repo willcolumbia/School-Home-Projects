@@ -7,25 +7,39 @@
     <body>
 
       <div class="top-banner">
-        <h1>Riverside Mens Soccer</h1>
+        <img src="../static/assets/banner.jpg">
       </div>
-
+      
       <nav id="main-nav">
-            <ul>
-        
-                <li><a href="{% url 'calendar' %}">Calendar</a></li>
-                <li>News</li>
-                <li>Schedule</li>
-                <li>Roster</li>
-                <li>Photos</li>
-                <li>Videos</li>
+        <a href="{% url 'Home' %}"><img src="../static/assets/R.png"></a>
+        <img id="user" src="../static/assets/user.png">
+            <ul> 
+                <li><a class="internal-link" href="{% url 'calendar' %}">Calendar</a></li>
+                <li><a class="internal-link" href="{% url 'news' %}">News</a></li>
+                <li><a class="internal-link" href="#">Schedule</a></li>
+                <li><a class="internal-link" href="{% url 'tickets' %}">Tickets</a></li>
+                <li><a class="internal-link" href="#">Roster</a></li>
+                <li><a class="internal-link" href="#">Media</a></li>
+                <li><a class="internal-link" href="#">Athletes</a></li>
+                <li class="dropdown">More
+                    <div class="dropdown-content">
+                      <a href="#">Apparel</a>
+                      <a href="#">Team Stats</a>
+                      <a href="#">Player Stats</a>
+                    </div>
+                  </div></li>
             </ul>
       </nav>
 
       <div class="lower-banner">
         <h2>2023 AAAA State Champions</h2>
       </div>
-      
+      <div class="Ad-left">
+        <h1>ad</h1>
+    </div>
+    <div class="Ad-right">
+      <h1>ad</h1>
+  </div>
       <div class="slideshow-container">
 
             <!-- Full-width images with number and caption text -->
@@ -60,32 +74,25 @@
             <span class="dot" onclick="currentSlide(3)"></span>
           </div>
           <script>
-            let slideIndex = 1;
-            showSlides(slideIndex);
-            
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
-            }
-            
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
-            }
-            
-            function showSlides(n) {
-              let i;
-              let slides = document.getElementsByClassName("mySlides");
-              let dots = document.getElementsByClassName("dot");
-              if (n > slides.length) {slideIndex = 1}    
-              if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-              }
-              for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";  
-              dots[slideIndex-1].className += " active";
-            }
+           let slideIndex = 0;
+          showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
             window.onscroll = function() {scrollFunction()};
 
             function scrollFunction() {
@@ -98,12 +105,13 @@
             }
           </script>
       
+        
       <div class="box" id="NEWS">
         <h3>NEWS</h3>
       </div>
-      <div class="box" id="GAME">
+      <!-- <div class="box" id="GAME">
         <h3>NEXT MATCH</h3>
-      </div>
+      </div> -->
       <div class="box" id="SCHEDULE">
         <h3>SCHEDULE</h3>
       </div>

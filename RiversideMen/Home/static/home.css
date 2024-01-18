@@ -7,14 +7,11 @@ body {
     color: white;
     
 }
-
-.top-banner{
-  background-color: royalblue;
-  text-align: center;
-  padding: 10px;
+.top-banner img{
+  width: 100%;
   border-radius: 5px;
   box-shadow: 2px 0px 5px rgb(37, 37, 37);
-  
+  height: 200px;
 }
 
 /* Main Navigation */
@@ -32,16 +29,28 @@ body {
 }
 
 #main-nav img {
-    width: 100px;
-    height: 100px;
-    
+    width: 125px;
+    height: 125px;
+    float:left;
+    position: relative;
+    bottom:43px;
     
 }
 
+#main-nav #user {
+  width: 50px;
+  height: 50px;
+  float:right;
+  position: relative;
+  /* top:0.1px; */
+  bottom: 5px;
+  background-color: white;
+  border-radius: 50%;
+}
 #main-nav ul {
     display: inline;
     max-width: 100%;
-    margin-left: 25%;
+    /*margin-left: 25%;*/
 }
 
 #main-nav li {
@@ -51,6 +60,7 @@ body {
     text-align: center;
     font: 2em sans-serif;
     display: inline;
+    
     
     
     
@@ -69,26 +79,65 @@ body {
 }
 #main-nav a:hover{
     color: rgb(228, 18, 18);
-    font-weight: bolder;
     margin-bottom: -10px;
 }
+.internal-link:hover{
+  font-weight: bolder;
+}
+
+/* Media Query */
+/* Dropdown Button */
+.dropdown:hover{
+  color: rgb(228, 18, 18);
+  font-weight: bolder;
+  margin-bottom: -10px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: 10px;
+  right:85px;
+  font-size: 16px;
+  background-color: #474747;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
 
 .lower-banner{
   background-color: royalblue;
-  text-align: center;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 2px 0px 5px rgb(37, 37, 37);
-
-  
 }
-
+ .lower-banner h2{
+  
+  text-align:center;
+ }
 /* Main Content */
 
 main {
-    width: 1670px;
-   position: relative;
-   left: 250px;
+  width: 1670px;
+  position: relative;
+  left: 250px;
     
 }
 
@@ -105,7 +154,7 @@ main h1, p {
     position: relative;
     margin: auto;
     margin-top: 50px;
-   
+    box-shadow: 0px 0px 50px rgb(37, 37, 37);
   
 }
 .slide-pics{
@@ -189,12 +238,12 @@ main h1, p {
 
 /* Fading animation */
 .fade {
-  animation-name: fade;
+  animation-name:fade;
   animation-duration: 1.5s;
 }
 
 @keyframes fade {
-  from {opacity: .4}
+  from {opacity: .8}
   to {opacity: 1}
 }
 
@@ -209,19 +258,38 @@ main h1, p {
 }
 #NEWS{
   position: absolute;
-  left:15%;
+  left:20%;
 }
-#GAME{
+/* #GAME{
   position: absolute;
-  left:40%;
-}
+  left:400px;
+} */
 #SCHEDULE{
   position: absolute;
-  right: 15%;
+  right: 20%;
 }
 
+.Ad-left{
+  text-align: center;
+  width: 200px;
+  position: absolute;
+  height: 600px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(37, 37, 37);
+  left:5px;
+  top:50%;
+}
+.Ad-right{
+  text-align: center;
+  width: 200px;
+  position: absolute;
+  height: 600px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(37, 37, 37);
+  right:5px;
+  top:50%;
 
-
+}
 
 
 

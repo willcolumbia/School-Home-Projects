@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
+from django.conf.urls.static import static
 from Home.views import Home
 from Calendar import views as calViews
 from News import views as newsViews
@@ -9,8 +10,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("",Home,name="Home"),
     path('calendar/', calViews.CalendarView.as_view(), name='calendar'),
+    path('event/view/(?P<event_id>\d+)/', calViews.event, name='event_edit'),
     path('news/', newsViews.News,name="news"),
     path('tickets/',ticketViews.Tickets,name="tickets"),
     
-]
+] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 

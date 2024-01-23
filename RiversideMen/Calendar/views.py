@@ -5,6 +5,7 @@ from django.views import generic
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 import calendar
+from .forms import EventForm
 
 from .models import *
 from .utils import Calendar
@@ -12,8 +13,7 @@ from .utils import Calendar
 # Create your views here.
 
 
-def index(request):
-    return HttpResponse('hello')
+
 
 
 
@@ -63,8 +63,4 @@ def event(request, event_id=None):
     else:
         instance = Event()
     
-    form = EventForm(request.POST or None, instance=instance)
-    if request.POST and form.is_valid():
-        form.save()
-        return HttpResponseRedirect(reverse('calendar'))
-    return render(request, 'event.html', {'form': form})
+    return render(request, 'event.html', {'all': instance})

@@ -1,4 +1,6 @@
 from django.shortcuts import render
-
+from Calendar.models import Event
+from django.shortcuts import render,get_object_or_404
 def Home(request):
-    return render(request, "home.html")
+    instance = Event.objects.all().first()
+    return render(request, 'home.html', {'all': instance})

@@ -3,6 +3,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from Home.views import Home
+
 from Calendar import views as calViews
 from News import views as newsViews
 from Tickets import views as ticketViews

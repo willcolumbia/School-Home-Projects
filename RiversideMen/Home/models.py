@@ -8,8 +8,12 @@ class Event(models.Model):
     end_time = models.DateTimeField()
     color_code = models.CharField(max_length=6)
     location = models.CharField(max_length=100)
-    team_img = models.ImageField(upload_to="pictures/")\
+    team_img = models.ImageField(upload_to="pictures/")
     
     class Meta:
         managed = False
         db_table = 'Event'
+
+class SlideShow(models.Model):
+    caption = models.CharField(max_length=100)
+    image = models.ImageField(upload_to="pictures/")

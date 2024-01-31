@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'Roster',
     'Schedule',
     'Tickets',
+    'Athletes',
 ]
 
 MIDDLEWARE = [

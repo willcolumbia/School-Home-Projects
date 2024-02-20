@@ -1,6 +1,0 @@
-accept
-accept
-reject
-accept
-reject
-reject

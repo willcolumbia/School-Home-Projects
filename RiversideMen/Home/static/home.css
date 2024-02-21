@@ -1,0 +1,424 @@
+/* Body */
+
+body {
+    background-color: rgb(204, 198, 198);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    color: white;
+    max-width:100%;
+    
+}
+.top-banner img{
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 2px 0px 5px rgb(37, 37, 37);
+  height: 200px;
+}
+
+/* Main Navigation */
+
+#main-nav {
+    width: 100%;
+    position: sticky;
+    background-color: rgb(228, 18, 18);
+    box-shadow: 0px 0px 50px rgb(37, 37, 37);
+    border-radius: 5px;
+    padding: 15px 20px;
+    transition: top 0.3s;
+    z-index: 1;
+   
+}
+
+#main-nav img {
+    width: 125px;
+    height: 125px;
+    float:left;
+    position: relative;
+    bottom:43px;
+    
+}
+
+#main-nav #facebook {
+  width: 50px;
+  height: 50px;
+  float:right;
+  position: relative;
+  /* top:0.1px; */
+  bottom: 5px;
+  border-radius: 10%;
+  margin-right:15px;
+}
+#main-nav #instagram {
+  width: 50px;
+  height: 50px;
+  float:right;
+  position: relative;
+  /* top:0.1px; */
+  bottom: 5px;
+  border-radius: 30%;
+  margin-right:15px;
+}
+#main-nav #twitter {
+  width: 50px;
+  height: 50px;
+  float:right;
+  position: relative;
+  /* top:0.1px; */
+  bottom: 5px;
+  
+}
+#main-nav ul {
+    display: inline;
+    max-width: 100%;
+    margin-left: 150px;
+    
+}
+
+#main-nav li {
+    list-style-type: none;
+    padding: 15px 20px;
+    max-width: 100%;
+    text-align: center;
+    font: 2em sans-serif;
+    display: inline;
+    
+    
+    
+    
+}
+
+#main-nav li:hover {
+    transition: 0.5s;
+    background-color: rgb(212, 208, 208);
+    border-radius: 10px;
+    margin-bottom: -10px;
+}
+
+#main-nav .internal-link {
+    color: white;
+    text-decoration: none;
+}
+#main-nav .internal-link:hover{
+    color: rgb(195,64,70);
+    margin-bottom: -10px;
+    font-weight: bolder;
+}
+
+/* Media Query */
+/* Dropdown Button */
+.dropdown:hover{
+  color: rgb(228, 18, 18);
+  font-weight: bolder;
+  margin-bottom: -10px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: 10px;
+  right:387px;
+  font-size: 16px;
+  background-color: #474747;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10%;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: rgb(253, 250, 250);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: rgb(228, 18, 18);
+  border-radius: 10%;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+.lower-banner{
+  background-color: royalblue;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 0px 5px rgb(37, 37, 37);
+}
+ .lower-banner h2{
+  
+  text-align:center;
+ }
+/* Main Content */
+
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 0px 0px 50px rgb(37, 37, 37);
+  
+}
+.slide-pics{
+    width: 1000px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 2px 5px;
+  background-color: #727272;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.dot-div{
+    text-align: center;
+}
+
+.active, .dot:hover {
+  background-color: #0a0a0a;
+}
+
+/* Fading animation */
+.fade {
+  animation-name:fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .8}
+  to {opacity: 1}
+}
+
+
+.box{
+  text-align: center;
+  width: 400px;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(37, 37, 37);
+  margin-top: 20px;
+}
+#NEWS{
+  position: absolute;
+  left:20%;
+}
+/* #GAME{
+  position: absolute;
+  left:400px;
+} */
+#SCHEDULE{
+  position: absolute;
+  right: 20%;
+}
+
+.Ad-left{
+  text-align: center;
+  width: 200px;
+  position: absolute;
+  height: 600px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(37, 37, 37);
+  left:5px;
+  top:50%;
+}
+.Ad-right{
+  text-align: center;
+  width: 200px;
+  position: absolute;
+  height: 600px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(37, 37, 37);
+  right:5px;
+  top:50%;
+
+}
+
+.Ad-center{
+  text-align: center;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(37, 37, 37);
+  margin-top: 25%;
+}
+
+
+.tickets{
+  position: relative;
+  top: 100px;
+  font-size:xx-large;
+  font-weight: bolder;
+  width:300px;
+  height: 75px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(42,68,134);
+  box-shadow: 0 0 0 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+.tickets:hover{
+  background-color: rgb(195,64,70);
+  color: white;
+  background-color: rgb(195,64,70);
+  text-decoration: none;
+  box-shadow: 10px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.clearfix {
+margin: 15px;
+}
+
+.container{
+  text-align: center;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 600px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(37, 37, 37);
+  color: white;
+  background-image: url("../static/assets/stadiumbackground.webp");
+  background-repeat: no-repeat;
+  background-size: 100%;;
+  background-position: center;
+  
+}
+
+.location{
+text-decoration: underline;
+color: red;
+font-size: larger;
+}
+
+.team_logo{
+position: relative;
+float: left;
+margin-left: 150px;
+bottom: 100px;
+}
+.Riverside_logo{
+position: relative;
+float: right;
+margin-right: 150px;
+bottom: 125px;
+}
+.vs{
+position: relative;
+top: 50px;
+}
+.time{
+position: relative;
+top: 50px;
+}
+
+
+.footer{
+  width: 100%;
+  background-color: royalblue;
+  height: 100px;
+  margin-top: 100%;
+}
+.footer ul{
+  display: inline;
+  max-width: 100%;
+  margin-left: 25%;
+}
+
+.footer li{
+  list-style-type: none;
+  padding: 15px 20px;
+  max-width: 100%;
+  text-align: center;
+  font: 2em sans-serif;
+  display: inline;
+  
+}
+.footer img{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top:25%;
+}
+/* Media Query */
+
+@media only screen and (max-width: 1200px) {
+  
+}

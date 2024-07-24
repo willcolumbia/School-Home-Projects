@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Mrs.Columbia's Class</title>
+    <link rel="stylesheet" href="../static/home.css">
+    <body>
+        <nav id="main-nav">
+            
+        </nav>
+        <main>
+            <form method="POST">
+                {% csrf_token %}
+                <section id="studentInfo">
+                    <h3>Client Information</h3>
+                    <p>
+                    <section id="name">
+                        <h3>Child's Information </h3>
+                            <label>Child's First Name</label>
+                            <li>{{  studentform.firstName}}</li>
+                            <label>Child's Last Name</label>
+                           <li> {{  studentform.lastName}}</li>
+                            <label>Child's Preferred Name</label>
+                            <li>{{  studentform.preferredName}}</li>
+                            <label>Child's Birthday</label>
+                           <li> {{  studentform.birthday}}</li>
+                    
+                    <br><hr>
+                    
+                        <label>Child's Address</label>
+                       <li> {{  studentform.address}}</li>
+                        <label>Child's Allergies/Medical Conditions (N/A if not applicable)</label>
+                        <li>{{  studentform.medical}}</li>
+                        <label>Child's T-Shirt Size</label>
+                        <li>{{  studentform.tshirt}}</li>
+                        <label>Siblings at MRES (Please specify name & grade/teacher) (N/A if not applicable)</label>
+                        <li>{{  studentform.siblings}}</li>
+                    </section>
+                    <section id = "parent1Info">
+                        <h3>Child's Parent/Guardian #1</h3>
+                        <label>Name</label>
+                       <li> {{  studentform.parentName1}}</li>
+                        <label>Relation</label>
+                        <li>{{  studentform.realtion1}}</li>
+                        <label>Phone #</label>
+                        <li>{{  studentform.phoneNumber1}}</li>
+                        <label>Email</label>
+                        <li>{{  studentform.email1}}</li>
+                    </section>
+                    <section id = "parent2Info">
+                        <h3>Child's Parent/Guardian #2 (N/A if not applicable)</h3>
+                        <label>Name</label>
+                        <li>{{  studentform.parentName2}}</li>
+                        <label>Relation</label>
+                        <li> {{  studentform.realtion2}}</li>
+                        <label>Phone #</label>
+                        <li>{{  studentform.phoneNumber2}}</li>
+                        <label>Email</label>
+                        <li>{{  studentform.email2}}</li>
+                    </section>
+                    <section id = "afterSchool">
+                        <h3>Afternoon Transportation</h3>
+                        <h4>Car Line</h4>
+                        <label>Grades 2-5</label>
+                        <li> {{  studentform.carline25}}</li>
+                        <label>Grades K-1 (siblings in K4-1st grade)</label>
+                        <li>{{  studentform.carlinek1}}</li>
+                        <h4>Bus</h4>
+                        <label>Blue Bus</label>
+                        <li> {{  studentform.blueBus}}</li>
+                        <label>Red Bus</label>
+                        <li> {{  studentform.redBus}}</li>
+                        <label>walker</label>
+                        <li> {{  studentform.walker}}</li>
+                        <label>Walker Location (N/A if not applicable)</label>
+                        <li>{{  studentform.walkerLocation}} </li>
+                        <label>Van (N/A if not applicable)</label>
+                        <li> {{  studentform.Van}}</li>
+                        <label>ACE</label>
+                        <li>  {{  studentform.ACE}}</li>
+                        <label>Additional (N/A if not applicable)</label>
+                        <li>  {{  studentform.additional}}</li>
+                    </section>
+                   </p>  
+                </section>
+                <hr>
+                <input type="submit" value="Submit" class="submit">
+            </form>
+        </main>
+    </body>
+</html>
